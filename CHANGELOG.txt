@@ -1,0 +1,10 @@
+MY LIFE MANAGER PRO — CHANGELOG
+v1.1
+- Added generated lending/borrowing/repayment confirmation text after saving each person-ledger entry.
+- Added WhatsApp deep link, SMS composer, native share, and copy message actions.
+- Added shareable person-wise statement text with receivable/payable balances.
+- Added payment method and reference number to ledger entries.
+- Preserved IndexedDB database name and version 1 to retain existing local records.
+- Bumped service-worker cache version to mlm-pro-v1-1.
+
+Important: Sending is never automatic. User reviews the generated message and sends it manually. WhatsApp/SMS require the contact phone number and installed/available app.

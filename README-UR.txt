@@ -9,8 +9,10 @@ MY LIFE MANAGER PRO — SETUP GUIDE (Roman Urdu)
 FEATURES INCLUDED:
 - Offline PWA shell + IndexedDB local records
 - Income, household, personal, other expense records
-- Person-wise lending/borrowing ledger (basic entries)
+- Person-wise lending/borrowing ledger with WhatsApp/SMS/copy confirmation message after each entry
 - Photo and voice evidence attachments on transaction and person ledger entries
+- Per-person shareable text statement with running outstanding balances
+- Ledger payment method and reference number fields
 - Salary settings and salary payment history
 - Overtime hours/minutes/rate/multiplier calculator
 - Budgets, savings goals, reports, CSV, print/PDF
@@ -36,3 +38,18 @@ EDITING:
 - manifest.webmanifest = install name, icon and app display settings
 
 When changing code, keep a separate backup of your data JSON and the full project ZIP.
+
+VERSION 1.1 — LEN DEN MESSAGE UPGRADE
+- After saving a lending/borrowing/repayment entry, a confirmation message is generated automatically.
+- Choose Open WhatsApp, Open SMS, native Share, or Copy. Nothing is sent automatically; you review and tap send in the chosen app.
+- Person cards now include Share statement. The statement includes all saved entries and current receivable/payable balances.
+- Phone numbers are normalized for WhatsApp links; Pakistani numbers beginning with 03 are converted to 92 format.
+- Existing IndexedDB database name and version are preserved. This update is additive and does not intentionally reset existing records.
+- Service worker cache version was increased so the browser can fetch the updated application files.
+
+UPGRADE SAFETY:
+1) Before replacing files on GitHub, use the app's Backup & Restore > Download full backup.
+2) Keep your existing project folder/ZIP as a separate copy.
+3) Upload the updated project files to the SAME GitHub repository, replacing matching source files. Do not delete or recreate the repository.
+4) Refresh the hosted app. If old code remains, close the app and do a hard refresh / clear only the site cache (not site data).
+5) Do not clear site data or browser storage; that can erase IndexedDB financial records.
